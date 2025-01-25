@@ -48,7 +48,20 @@
     <section id="problem">
         <h2>The Problem</h2>
         <p>Markedet for polyester er verdt 77 milliarder USD, og vi er i en raskt voksende bransje som krever bærekraftige alternativer.</p>
-       
+        <div class="image-container">
+            <div class="image-box">
+                <img src="Screenshot 2025-01-25 at 3.18.59 pm.png" alt="Bilde 1" class="image">
+                <div class="image-text">Tekst for bilde 1</div>
+            </div>
+            <div class="image-box">
+                <img src="Screenshot 2025-01-25 at 3.18.59 pm.png" alt="Bilde 2" class="image">
+                <div class="image-text">Tekst for bilde 2</div>
+            </div>
+            <div class="image-box">
+                <img src="Screenshot 2025-01-25 at 3.18.59 pm.png" alt="Bilde 3" class="image">
+                <div class="image-text">Tekst for bilde 3</div>
+            </div>
+        </div>
     </section>
 
     <section id="solution">
@@ -64,13 +77,32 @@
         <h2>Om oss</h2>
         <p>PlantPoly tilbyr et biobasert polyester laget av resirkulert matavfall. Vårt mål er å redusere miljøpåvirkningen fra tekstilindustrien ved å tilby bærekraftige alternativer uten å gå på kompromiss med kvaliteten.</p>
     </section>
-
     <section id="contact">
         <h2>Kontakt oss</h2>
-        <p>For mer informasjon eller samarbeid, ta kontakt med:</p>
-        <p><strong>Petter Tangen Aspdahl</strong><br>Oslo, Norge<br>Email: petterta1002@gmail.com<br>Telefon: +47 938 24 054</p>
-        <p><strong>Meg Fisher</strong><br>Sydney, Australia<br>Email: megfisherart@gmail.com<br>Telefon: +61 466 838 170</p>
+        <p>Har du spørsmål? Fyll ut skjemaet nedenfor, og vi vil ta kontakt med deg så snart som mulig.</p>
+        
+        <form id="contact-form" action="submit_form.php" method="POST">
+            <div class="form-group">
+                <label for="name">Navn:</label>
+                <input type="text" id="name" name="name" required placeholder="Skriv ditt navn">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" required placeholder="Skriv din e-post">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Melding:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Skriv din melding her"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="cta-btn">Send</button>
+            </div>
+        </form>
     </section>
+    
 
     <footer>
         <p>&copy; 2025 PlantPoly. Alle rettigheter reservert.</p>
@@ -85,6 +117,17 @@
                 header.classList.remove('visible');
             }
         });
+
+        function toggleText(textId) {
+    const textElement = document.getElementById(textId);
+    if (textElement.style.opacity === '1') {
+        textElement.style.opacity = '0';
+        textElement.style.visibility = 'hidden';
+    } else {
+        textElement.style.opacity = '1';
+        textElement.style.visibility = 'visible';
+    }
+}
     </script>
 </body>
 </html>
