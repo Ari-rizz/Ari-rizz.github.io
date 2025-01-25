@@ -135,23 +135,21 @@ header nav ul li a:hover {
     padding: 50px 20px;
 }
 
-/* Animasjon for å få teksten til å fade in fra midten */
 @keyframes fadeInFromCenter {
     0% {
         opacity: 0;
-        transform: scale(0.5) translateY(20px); /* Begynner fra 0 størrelse og litt nede */
+        transform: scale(0.5) translateY(20px);
     }
     100% {
         opacity: 1;
-        transform: scale(1) translateY(0); /* Slutter på normal størrelse og opprinnelig posisjon */
+        transform: scale(1) translateY(0); 
     }
 }
 
-/* Påfør animasjonen på elementene */
 .hero .plant, .hero .middle-text, .hero .poly {
-    animation: fadeInFromCenter 1.5s ease-out forwards; /* Fader inn fra midten med en varighet på 1.5 sekunder */
-    opacity: 0; /* Start som usynlig */
-    transform: scale(0.5) translateY(20px); /* Begynner fra en liten størrelse og lav posisjon */
+    animation: fadeInFromCenter 1.5s ease-out forwards; 
+    opacity: 0;
+    transform: scale(0.5) translateY(20px); 
 }
 
 
@@ -164,7 +162,7 @@ header nav ul li a:hover {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 40px;
     color: #2e8b57;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Legger til skygge for å fremheve teksten */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .hero .middle-text {
@@ -175,8 +173,8 @@ header nav ul li a:hover {
     margin-left: 35px;
     vertical-align: middle;
     letter-spacing: 10px;
-    color: #ffffff; /* Hvit farge for teksten mellom */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Legger til skygge for fremheving */
+    color: #ffffff; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); 
 }
 
 
@@ -219,14 +217,14 @@ header nav ul li a:hover {
 }
 
 .image-text {
-    position: absolute; /* Plassere teksten over bildet */
+    position: absolute; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 16px;
-    opacity: 0; /* Start med usynlig tekst */
-    visibility: hidden; /* Start med usynlig tekst */
+    opacity: 0;
+    visibility: hidden; 
     transition: opacity 0.3s ease, visibility 0.3s ease;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px;
@@ -234,12 +232,12 @@ header nav ul li a:hover {
 }
 
 .image-box:hover .image {
-    transform: scale(1.1); /* Zoomer inn på bildet ved hover */
+    transform: scale(1.1);
 }
 
 .image-box:hover .image-text {
     opacity: 1;
-    visibility: visible; /* Vis teksten når musen er over bildet */
+    visibility: visible;
 }
 
 section {
@@ -256,6 +254,95 @@ section h2 {
 section p {
     font-size: 18px;
     margin-bottom: 20px;
+}
+
+#contact {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button.cta-btn {
+    background-color: #3c9d6e;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.cta-btn:hover {
+    background-color: #2e8b57;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #3c9d6e; 
+    box-shadow: 0 0 5px rgba(60, 157, 110, 0.5);
+}
+
+form .form-group {
+    margin-bottom: 20px;
+}
+
+form .form-group:last-child {
+    margin-bottom: 0;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+select:focus {
+    outline: none;
+    border-color: #3c9d6e;
+    box-shadow: 0 0 5px rgba(60, 157, 110, 0.5);
+}
+
+option {
+    padding: 10px;
 }
 
 ul {

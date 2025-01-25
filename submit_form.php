@@ -1,20 +1,25 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST['name']); 
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
+    $contact_reason = htmlspecialchars($_POST['contact-reason']);
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
 
+   
+    $to = "post.aissistant@gmail.com"; 
+    $subject = "Ny melding fra kontaktskjema";
+    $body = "Navn: $name\nE-post: $email\nMelding:\n$message"; 
+    $headers = "From: no-reply@ai-assistant.com" . "\r\n" .
+               "Reply-To: $email" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
 
-    $to = "your-email@example.com"; 
-    $subject = "Ny melding fra kontakt skjema";
-    $body = "Navn: $name\nE-post: $email\nMelding:\n$message";
-    $headers = "From: $email";
-
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Takk for meldingen! Vi vil kontakte deg snart.";
+    // Send e-posten
+    if (mail($to, $subject, $body, $headers)) { 
+        header("Location: /comfirmation.html"); 
+        exit;
     } else {
-        echo "Noe gikk galt. Vennligst prøv igjen.";
+        echo "Beklager, meldingen din kunne ikke sendes. Prøv igjen senere."; 
     }
 }
 ?>
