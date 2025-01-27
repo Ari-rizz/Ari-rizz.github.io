@@ -270,7 +270,7 @@ header nav ul li a:hover {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 200px;
+    height: 210px;
     z-index: 1; 
     opacity: 1;
 }
@@ -407,7 +407,7 @@ input:focus, textarea:focus {
 }
 
 form .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 form .form-group:last-child {
